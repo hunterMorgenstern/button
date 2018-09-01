@@ -7,11 +7,8 @@
     "test": "jest",
     "start:server": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hunterMorgenstern/button.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/hunterMorgenstern/button.git",
+  "author": "Hunter Morgenstern <hunter.morgenstern@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hunterMorgenstern/button/issues"

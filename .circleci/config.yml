@@ -33,5 +33,4 @@ jobs:
       #     key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      #actually add atesting suite first
-      # - run: yarn test
+      - run: yarn test

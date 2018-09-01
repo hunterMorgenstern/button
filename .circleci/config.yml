@@ -28,7 +28,7 @@ jobs:
 
       - run: yarn install
 
-          yarn start:server
+      - run: yarn start:server
       # - save_cache:
       #     paths:
       #       - node_modules

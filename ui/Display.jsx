@@ -16,8 +16,10 @@ class Display extends Component {
   render() {
     return (
       <div>
-        <div>{this.state.display ? this.state.text : ""}</div>
-        <button onClick={this.flipText}>Click to see text</button>
+        <button onClick={this.flipText} className="main-button">
+          Click to see text
+        </button>
+        <div className="display-box">{this.state.display ? this.state.text : ""}</div>
       </div>
     );
   }

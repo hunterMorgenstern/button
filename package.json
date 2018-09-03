@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "circleci deployment",
   "main": "index.js",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
   "scripts": {
     "test": "jest",
     "start:server": "nodemon app.js"
@@ -15,8 +21,10 @@
   },
   "homepage": "https://github.com/hunterMorgenstern/button#readme",
   "dependencies": {
+    "babel-jest": "^23.4.2",
     "babel-loader": "7",
     "babel-preset-env": "^1.7.0",
+    "enzyme": "^3.5.0",
     "express": "^4.16.3",
     "nodemon": "^1.18.4",
     "react": "^16.4.2",

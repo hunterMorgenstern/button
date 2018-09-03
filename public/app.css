@@ -1,4 +1,28 @@
+body {
+  background: black;
+}
+
 div {
   margin-top: 10%;
   text-align: center;
+}
+
+.main-button {
+  font-family: "Roboto";
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  background: #2abd4a;
+  color: whitesmoke;
+}
+
+.display-box {
+  font-family: "Roboto";
+  color: whitesmoke;
+  font-size: 20px;
+  margin: 20px;
 }

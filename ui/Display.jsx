@@ -17,7 +17,7 @@ class Display extends Component {
     return (
       <div>
         <button onClick={this.flipText} className="main-button">
-          Click to see text
+          {this.state.display ? "Hide text" : "Show Text"}
         </button>
         <div className="display-box">{this.state.display ? this.state.text : ""}</div>
       </div>

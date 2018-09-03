@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
 
 import Display from "./Display";
 
@@ -9,4 +9,4 @@ const App = () => (
   </div>
 );
 
-render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("app"));

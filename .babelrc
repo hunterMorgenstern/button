@@ -1,15 +1,29 @@
 {
   "presets": [
-    "react",
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": "last 2 versions"
-        },
-        "loose": true,
-        "modules": false
-      }
-    ]
-  ]
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 9"],
+        "uglify": true
+      },
+      "useBuiltIns": true
+    }],
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    ["transform-class-properties", { "spec": true }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    },
+    "server": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }

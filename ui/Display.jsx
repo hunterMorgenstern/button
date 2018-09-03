@@ -4,14 +4,13 @@ class Display extends Component {
   constructor(props) {
     super(props);
     this.state = { text: "text to display", display: false };
-    this.flipText = this.flipText.bind(this);
   }
 
-  flipText() {
+  flipText = () => {
     this.setState({
       display: !this.state.display
     });
-  }
+  };
 
   render() {
     return (
@@ -19,7 +18,9 @@ class Display extends Component {
         <button onClick={this.flipText} className="main-button">
           Click to see text
         </button>
-        <div className="display-box">{this.state.display ? this.state.text : ""}</div>
+        <div className="display-box">
+		      {this.state.display ? this.state.text : ""}
+				</div>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React from "react";
+import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { mount, configure } from "enzyme";
 import Display from "../ui/Display";
 
 configure({ adapter: new Adapter() });
@@ -8,11 +8,10 @@ configure({ adapter: new Adapter() });
 describe("Display", () => {
   it("should display text on click", () => {
     const component = mount(<Display />);
-    console.log("this is component", component);
-    // component.find("button#main-button").simulate("click");
-    // const textBox = component.find("display-box");
-    // console.log(textBox);
-    // expect(textBox).toBe("text");
+    const textBox = component.find(".display-box");
+    expect(textBox.text()).toBe("");
+    component.find(".main-button").simulate("click");
+    expect(textBox.text()).toBe("text to display");
     component.unmount();
   });
 });

@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: #161616;
 }
 
 div {
@@ -12,6 +12,7 @@ div {
   text-align: center;
   cursor: pointer;
   border: 1px solid transparent;
+  width: 150px;
   padding: 6px 12px;
   font-size: 16px;
   line-height: 1.5;

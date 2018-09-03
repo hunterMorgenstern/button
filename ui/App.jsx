@@ -10,3 +10,5 @@ const App = () => (
 );
 
 render(<App />, document.getElementById("app"));
+
+export default App;

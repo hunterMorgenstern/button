@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-import Display from "./Display";
+import Display from "./components/Display";
 
 const App = () => (
   <div>

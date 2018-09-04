@@ -36,7 +36,7 @@
   "scripts": {
     "test": "jest",
     "dev:server": "nodemon app.js",
-    "start": "node server.js",
+    "start": "node app.js",
     "heroku-postbuild": "webpack -p"
   }
 }

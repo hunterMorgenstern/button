@@ -38,7 +38,7 @@
   "scripts": {
     "dev:server": "nodemon ./src/server/app.js",
     "heroku-postbuild": "webpack -p",
-    "start": "node app.js",
+    "start": "node ./src/server/app.js",
     "test": "jest",
     "watch": "webpack -w"
   }

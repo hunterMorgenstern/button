@@ -2,7 +2,7 @@ import Adapter from "enzyme-adapter-react-16";
 import React from "react";
 import { configure, mount } from "enzyme";
 
-import Display from "../src/components/Display";
+import Display from "../src/client/components/Display";
 
 configure({ adapter: new Adapter() });
 

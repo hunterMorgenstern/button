@@ -45,9 +45,9 @@ class Display extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <h1 className="header">Button of Mystery</h1>
+      <div className="display">
+        <div className="header">
+          <h1 className="title">Button</h1>
           <div className="buttons">
             <button onClick={this.flipText} className="main-button">
               {this.state.display ? "Hide text" : "Show Text"}
@@ -63,7 +63,7 @@ class Display extends Component {
           </div>
         </div>
 
-        <div className="display-box">
+        <div className={this.state.display ? "display-box" : " hide"}>
           {this.state.display ? (
             <div className={this.state.fade ? "text" : "text-a"}>
               <p>{this.state.text}</p> <p className="author"> - {this.state.author}</p>

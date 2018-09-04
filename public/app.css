@@ -1,15 +1,17 @@
 body {
-  background: #161616;
+  background: #140078;
 }
 
 .header {
+}
+
+.title {
   text-align: left;
   margin-left: 5%;
   color: whitesmoke;
   display: inline-block;
 }
 
-/* display container */
 .buttons {
   margin-top: 20px;
   margin-right: 40px;
@@ -17,16 +19,16 @@ body {
 }
 .main-button,
 .new-quote-button {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  font-size: 16px;
   cursor: pointer;
   border: 1px solid transparent;
+  border-radius: 4px;
   width: 150px;
   padding: 6px 12px;
   margin-left: 10px;
-  font-size: 16px;
   line-height: 1.5;
-  border-radius: 4px;
   background: #04aa51;
   color: whitesmoke;
 }
@@ -38,6 +40,29 @@ body {
 .new-quote-button:hover {
   background: #2abd4a;
   border-color: #2abd4a;
+}
+
+.display {
+  width: 80%;
+  margin-left: 10%;
+}
+.display-box {
+  padding-bottom: 1%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-align: left;
+  background: whitesmoke;
+  border-radius: 4px;
+  margin: 10% 3.5% 0% 5%;
+  padding: 1% 0% 0% 4%;
+  padding: 1% 0% 1% 4%;
+}
+.hide {
+  display: none;
+}
+.author {
+  text-align: right;
+  margin-right: 40%;
 }
 
 @keyframes fadein {
@@ -57,21 +82,13 @@ body {
   }
 }
 
-.display-box {
-  font-family: "Roboto";
-  color: whitesmoke;
-  font-size: 20px;
-  text-align: left;
-  margin: 0% 12% 0% 12%;
-}
-.author {
-  text-align: right;
-  margin-right: 15%;
-}
 body,
 .text {
+  color: #006db3;
   animation: fadein 2s;
 }
+body,
 .text-a {
+  color: #78002e;
   animation: fadein-a 2s;
 }

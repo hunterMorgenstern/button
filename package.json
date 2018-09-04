@@ -18,6 +18,7 @@
     "babel-jest": "^23.4.2",
     "babel-loader": "7",
     "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "nodemon": "^1.18.4",
     "react": "^16.4.2",
@@ -34,7 +35,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start:server": "nodemon app.js",
-    "start": "node app.js"
+    "dev:server": "nodemon app.js",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   }
 }

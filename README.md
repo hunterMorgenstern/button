@@ -4,6 +4,10 @@
 
 Button is a nice simple app that generates quotes.
 
+## Install Dependencies
+
+Run `yarn install`
+
 ## Starting the server
 
 Run `cp .env.default .env`

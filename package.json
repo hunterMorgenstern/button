@@ -6,13 +6,13 @@
   "repository": "git+https://github.com/hunterMorgenstern/button.git",
   "author": "Hunter Morgenstern <hunter.morgenstern@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/hunterMorgenstern/button#readme",
   "bugs": {
     "url": "https://github.com/hunterMorgenstern/button/issues"
   },
   "engines": {
     "node": "8.11.4"
   },
-  "homepage": "https://github.com/hunterMorgenstern/button#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
@@ -34,10 +34,10 @@
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "dev:server": "nodemon app.js",
+    "dev:server": "nodemon ./src/server/app.js",
     "heroku-postbuild": "webpack -p",
     "start": "node app.js",
     "test": "jest",
-		"watch": "webpack -w"
+    "watch": "webpack -w"
   }
 }

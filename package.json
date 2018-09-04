@@ -1,11 +1,11 @@
 {
   "name": "button",
   "version": "1.0.0",
-  "description": "circleci deployment",
+  "description": "Button is a nice simple app that generates quotes.",
   "main": "index.js",
   "repository": "git+https://github.com/hunterMorgenstern/button.git",
   "author": "Hunter Morgenstern <hunter.morgenstern@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hunterMorgenstern/button/issues"
   },
@@ -34,9 +34,10 @@
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "test": "jest",
     "dev:server": "nodemon app.js",
+    "heroku-postbuild": "webpack -p",
     "start": "node app.js",
-    "heroku-postbuild": "webpack -p"
+    "test": "jest",
+		"watch": "webpack -w"
   }
 }

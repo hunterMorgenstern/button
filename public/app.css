@@ -2,33 +2,20 @@ body {
   background: #161616;
 }
 
-/* div {
-  margin-top: 10%;
-  text-align: center;
-} */
 .header {
   text-align: left;
   margin-left: 5%;
   color: whitesmoke;
-}
-.buttons {
-  text-align: center;
-}
-.main-button {
-  font-family: "Roboto";
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-  width: 150px;
-  padding: 6px 12px;
-  margin-left: 10px;
-  font-size: 16px;
-  line-height: 1.5;
-  border-radius: 4px;
-  background: #2abd4a;
-  color: whitesmoke;
+  display: inline-block;
 }
 
+/* display container */
+.buttons {
+  margin-top: 20px;
+  margin-right: 40px;
+  float: right;
+}
+.main-button,
 .new-quote-button {
   font-family: "Roboto";
   text-align: center;
@@ -40,13 +27,51 @@ body {
   font-size: 16px;
   line-height: 1.5;
   border-radius: 4px;
-  background: #2abd4a;
+  background: #04aa51;
   color: whitesmoke;
+}
+.main-button:focus,
+.new-quote-button:focus {
+  outline: 0;
+}
+.main-button:hover,
+.new-quote-button:hover {
+  background: #2abd4a;
+  border-color: #2abd4a;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein-a {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .display-box {
   font-family: "Roboto";
   color: whitesmoke;
   font-size: 20px;
-  margin: 20px;
+  text-align: left;
+  margin: 0% 12% 0% 12%;
+}
+.author {
+  text-align: right;
+  margin-right: 15%;
+}
+body,
+.text {
+  animation: fadein 2s;
+}
+.text-a {
+  animation: fadein-a 2s;
 }

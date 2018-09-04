@@ -6,8 +6,11 @@ Button is a nice simple app that generates quotes.
 
 ## Starting the server
 
+Run `cp .env.default .env`
+
 Start your node server with `yarn dev:server`
-and start your webpack server with `yarn watch`
+
+Start your webpack server with `yarn watch`
 
 ## Running Tests
 

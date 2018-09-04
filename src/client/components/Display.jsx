@@ -6,14 +6,9 @@ class Display extends Component {
     super(props);
     this.state = {
       text: "text to display",
+      author: "Mr.Banana Man",
       display: false,
-      i: 0,
-      quotes: [
-        {
-          quote: "banana man",
-          name: "Francis of Assisi"
-        }
-      ]
+      quotes: []
     };
     this.flipText = this.flipText.bind(this);
     this.newQuote = this.newQuote.bind(this);
@@ -24,7 +19,7 @@ class Display extends Component {
       .get("/api/quotes")
       .then(response => {
         this.setState({
-          text: response.data.quote
+          quotes: response.data.quotes
         });
       })
       .catch(error => {
@@ -39,9 +34,10 @@ class Display extends Component {
   }
 
   newQuote() {
+    const randomInt = Math.floor(Math.random() * this.state.quotes.length);
     this.setState({
-      text: this.state.quotes[this.state.i].quote,
-      i: this.state.i + 1
+      text: this.state.quotes[randomInt].quote,
+      author: this.state.quotes[randomInt].name
     });
   }
 
@@ -51,10 +47,23 @@ class Display extends Component {
         <button onClick={this.flipText} className="main-button">
           {this.state.display ? "Hide text" : "Show Text"}
         </button>
-        <button onClick={this.newQuote} className="new-quote-button">
-          New Quote
-        </button>
-        <div className="display-box">{this.state.display ? this.state.text : ""}</div>
+        {this.state.display ? (
+          <button onClick={this.newQuote} className="new-quote-button">
+            New Quote
+          </button>
+        ) : (
+          <div />
+        )}
+
+        <div className="display-box">
+          {this.state.display ? (
+            <div>
+              <p>{this.state.text}</p> <p>{this.state.author}</p>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     );
   }

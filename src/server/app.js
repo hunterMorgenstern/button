@@ -1,7 +1,8 @@
 const express = require("express");
 const path = require("path");
-require("dotenv").config();
 const bodyParser = require("body-parser");
+const data = require("./db");
+require("dotenv").config();
 
 const app = express();
 const router = express.Router();
@@ -14,11 +15,7 @@ app.use(express.static(path.join(__dirname, "../../public")));
 app.use("/api", router);
 
 router.route("/quotes").get((req, res) => {
-  // actually grab data from file and send forward
-  res.json({
-    quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
-    name: "Francis of Assisi"
-  });
+  res.json(data);
 });
 
 app.get("/", (req, res) => res.send(200));

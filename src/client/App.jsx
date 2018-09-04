@@ -5,6 +5,9 @@ import Display from "./components/Display";
 
 const App = () => (
   <div>
+    <div>
+      <h1 className="header">Button of Mystery</h1>
+    </div>
     <Display />
   </div>
 );

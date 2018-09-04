@@ -2,11 +2,18 @@ body {
   background: #161616;
 }
 
-div {
+/* div {
   margin-top: 10%;
   text-align: center;
+} */
+.header {
+  text-align: left;
+  margin-left: 5%;
+  color: whitesmoke;
 }
-
+.buttons {
+  text-align: center;
+}
 .main-button {
   font-family: "Roboto";
   text-align: center;
@@ -14,6 +21,22 @@ div {
   border: 1px solid transparent;
   width: 150px;
   padding: 6px 12px;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  background: #2abd4a;
+  color: whitesmoke;
+}
+
+.new-quote-button {
+  font-family: "Roboto";
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  width: 150px;
+  padding: 6px 12px;
+  margin-left: 10px;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 4px;

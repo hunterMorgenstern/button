@@ -1,77 +1,91 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 
 class Display extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "text to display",
-      author: "Mr.Banana Man",
+      text: 'You pass butter.',
+      author: 'Rick Sanchez',
       display: false,
       quotes: [],
-      fade: false
+      fade: false,
     };
     this.flipText = this.flipText.bind(this);
     this.newQuote = this.newQuote.bind(this);
   }
 
   componentWillMount() {
-    axios
-      .get("/api/quotes")
-      .then(response => {
-        this.setState({
-          quotes: response.data.quotes
-        });
-      })
-      .catch(error => {
-        console.log(error);
+    axios.get('/api/quotes').then(response => {
+      this.setState({
+        quotes: response.data.quotes,
       });
+    });
   }
 
   flipText() {
+    const { display } = this.state;
     this.setState({
-      display: !this.state.display
+      display: !display,
     });
   }
 
   newQuote() {
-    const randomInt = Math.floor(Math.random() * this.state.quotes.length);
+    const { fade, quotes } = this.state;
+    const randomInt = Math.floor(Math.random() * quotes.length);
     this.setState({
-      fade: !this.state.fade,
-      text: this.state.quotes[randomInt].quote,
-      author: this.state.quotes[randomInt].name
+      fade: !fade,
+      text: quotes[randomInt].quote,
+      author: quotes[randomInt].name,
     });
   }
 
   render() {
+    const { display, fade, text, author } = this.state;
     return (
       <div className="display">
-        <div className="header">
+        <div className="sup-header" />
+        <header>
           <h1 className="title">Button</h1>
-          <div className="buttons">
-            <button onClick={this.flipText} className="main-button">
-              {this.state.display ? "Hide text" : "Show Text"}
-            </button>
+        </header>
 
-            {this.state.display ? (
-              <button onClick={this.newQuote} className="new-quote-button">
-                New Quote
-              </button>
-            ) : (
-              <div />
-            )}
-          </div>
-        </div>
-
-        <div className={this.state.display ? "display-box" : " hide"}>
-          {this.state.display ? (
-            <div className={this.state.fade ? "text" : "text-a"}>
-              <p>{this.state.text}</p> <p className="author"> - {this.state.author}</p>
+        <section className={display ? 'display-box' : ' hide'}>
+          {display ? (
+            <div className={fade ? 'text' : 'text-a'}>
+              <p>{text}</p> <p className="author"> - {author}</p>
             </div>
           ) : (
-            ""
+            ''
           )}
-        </div>
+        </section>
+
+        <section className="buttons">
+          <button onClick={this.flipText} className="main-button" type="button">
+            {display ? 'Hide Quote' : 'Show Quote'}
+          </button>
+
+          {display ? (
+            <button
+              onClick={this.newQuote}
+              className="new-quote-button"
+              type="button"
+            >
+              New Quote
+            </button>
+          ) : (
+            <div />
+          )}
+        </section>
+
+        <footer>
+          <nav>
+            <ul>
+              <li className="footer-link">
+                <a href="https://github.com/hunterMorgenstern/button">GitHub</a>
+              </li>
+            </ul>
+          </nav>
+        </footer>
       </div>
     );
   }

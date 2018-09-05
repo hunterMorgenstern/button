@@ -16,7 +16,7 @@ describe('Display', () => {
 
     component.find('.main-button').simulate('click');
 
-    expect(textBox.text()).toBe('text to display  - Mr.Banana Man');
+    expect(textBox.text()).toBe('You pass butter.  - Rick Sanchez');
 
     component.unmount();
   });

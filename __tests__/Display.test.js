@@ -1,7 +1,6 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { configure, mount } from 'enzyme';
-
+import { configure, mount, shallow, render } from 'enzyme';
 import Display from '../src/client/components/Display';
 
 configure({ adapter: new Adapter() });
@@ -19,5 +18,21 @@ describe('Display', () => {
     expect(textBox.text()).toBe('You pass butter.  - Rick Sanchez');
 
     component.unmount();
+  });
+
+  it('title is button', () => {
+    const component = render(<Display />);
+
+    const title = component.find('.title');
+
+    expect(title.text()).toBe('Button');
+  });
+
+  it('GitHub link', () => {
+    const component = render(<Display />);
+
+    const title = component.find('.footer-link');
+
+    expect(title.text()).toBe('GitHub');
   });
 });

@@ -1,13 +1,13 @@
 module.exports = {
   quotes: [
     {
-      quote:
-        "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
-      name: 'Francis of Assisi',
+      quote: `...if you aren't, at any given time, scandalized by code you wrote five or even three years ago, you're not learning anywhere near enough`,
+      name: 'Nick Black',
     },
     {
-      quote: "Believe you can and you're halfway there.",
-      name: 'Theodore Roosevelt',
+      quote:
+        'The most important property of a program is whether it accomplishes the intention of its user.',
+      name: 'C.A.R Hoare',
     },
     {
       quote: 'It does not matter how slowly you go as long as you do not stop.',
@@ -29,8 +29,36 @@ module.exports = {
     },
     {
       quote:
-        'A creative man is motivated by the desire to achieve, not by the desire to beat others.',
-      name: 'Ayn Rand',
+        'It is possible to invent a single machine which can be used to compute any computable sequence.',
+      name: 'Alan Turing',
+    },
+    {
+      quote: 'Most improved things can be improved.',
+      name: 'Mokokoma Mokhonoana',
+    },
+    {
+      quote:
+        'There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors.',
+      name: 'Leon Bambrick',
+    },
+    {
+      quote:
+        'Simple things should be simple, complex things should be possible.',
+      name: 'Alan Kay',
+    },
+    {
+      quote: 'Programming in machine code is like eating with a toothpick',
+      name: 'Charles Petzold',
+    },
+    {
+      quote:
+        'Tests are stories we tell the next generation of programmers on a project.',
+      name: 'Roy OSherove',
+    },
+    {
+      quote:
+        'The cost of electrons and photons is getting cheaper all the time!',
+      name: 'T. Gilling',
     },
   ],
 };

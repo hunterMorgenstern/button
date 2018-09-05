@@ -15,7 +15,7 @@ class Display extends Component {
     this.newQuote = this.newQuote.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('/api/quotes').then(response => {
       this.setState({
         quotes: response.data.quotes,

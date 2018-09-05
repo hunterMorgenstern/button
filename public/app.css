@@ -1,25 +1,49 @@
-body {
-  background: #140078;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-.header {
+body {
+  background: #e1e2e1;
+  margin: 0;
+}
+
+header {
+  background: #03a9f4;
+  min-width: 100%;
+}
+
+footer {
+  background: #f5f5f6;
+  color: #000;
+  bottom: 0;
+  min-width: 100%;
+  position: fixed;
+}
+
+.sup-header {
+  background: #007ac1;
+  height: 20px;
+  min-width: 100%;
 }
 
 .title {
   text-align: left;
   margin-left: 5%;
-  color: whitesmoke;
+  color: #000;
   display: inline-block;
 }
 
-.buttons {
-  margin-top: 20px;
-  margin-right: 40px;
-  float: right;
+.footer-link {
+  list-style: none;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .main-button,
 .new-quote-button {
-  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
@@ -27,42 +51,40 @@ body {
   border-radius: 4px;
   width: 150px;
   padding: 6px 12px;
-  margin-left: 10px;
+  margin: 20px 0 0 10px;
   line-height: 1.5;
-  background: #04aa51;
-  color: whitesmoke;
+  background: #03a9f4;
+  color: #000;
 }
+
 .main-button:focus,
 .new-quote-button:focus {
   outline: 0;
 }
+
 .main-button:hover,
 .new-quote-button:hover {
-  background: #2abd4a;
-  border-color: #2abd4a;
+  background: #67daff;
+  border-color: #67daff;
 }
 
-.display {
-  width: 80%;
-  margin-left: 10%;
-}
 .display-box {
   padding-bottom: 1%;
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
-  text-align: left;
-  background: whitesmoke;
+  text-align: center;
   border-radius: 4px;
   margin: 10% 3.5% 0% 5%;
   padding: 1% 0% 0% 4%;
   padding: 1% 0% 1% 4%;
+  animation: fadein 2s;
 }
+
 .hide {
   display: none;
 }
+
 .author {
-  text-align: right;
-  margin-right: 40%;
+  text-align: center;
 }
 
 @keyframes fadein {
@@ -73,6 +95,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes fadein-a {
   from {
     opacity: 0;
@@ -82,11 +105,11 @@ body {
   }
 }
 
-body,
 .text {
   color: #006db3;
   animation: fadein 2s;
 }
+
 body,
 .text-a {
   color: #78002e;

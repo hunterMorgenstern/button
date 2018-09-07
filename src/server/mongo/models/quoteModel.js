@@ -10,7 +10,7 @@ const quoteSchema = new Schema({
 
 const Quotes = mongoose.model('quote', quoteSchema);
 
-// Seeds db
+// // Seeds db
 // Quotes.insertMany(quotes.map(q => new Quotes({ quote: q.quote, name: q.name })))
 //   .then(docs => {
 //     // console.log('stored dummy data', docs);

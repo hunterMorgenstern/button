@@ -18,7 +18,7 @@ class Display extends Component {
   componentDidMount() {
     axios.get('/api/quotes').then(response => {
       this.setState({
-        quotes: response.data.quotes,
+        quotes: response.data,
       });
     });
   }

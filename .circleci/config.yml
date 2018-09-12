@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:8.11.4
+    environment:
+      JEST_JUNIT_OUTPUT: '~/test-results/jest'
 
     steps:
       - checkout

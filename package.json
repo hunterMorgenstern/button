@@ -13,6 +13,12 @@
   "engines": {
     "node": "8.11.4"
   },
+  "jest": {
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
@@ -41,6 +47,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.0",
     "jest": "^23.5.0",
+    "jest-junit": "^5.1.0",
     "prettier": "^1.14.2",
     "webpack-cli": "^3.1.0"
   },

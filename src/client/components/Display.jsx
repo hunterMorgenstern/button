@@ -86,6 +86,17 @@ class Display extends Component {
             </ul>
           </nav>
         </footer>
+        <div />
+
+<div></div>
+
+<div>{false}</div>
+
+<div>{null}</div>
+
+<div>{undefined}</div>
+
+<div>{true}</div>
       </div>
     );
   }

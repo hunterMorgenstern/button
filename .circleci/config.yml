@@ -27,6 +27,9 @@ jobs:
           name: Run Jest tests
           command: yarn test
 
+      - store_test_results:
+          path: test-results
+
       - run:
           name: Deploy Master to Heroku
           command: |
